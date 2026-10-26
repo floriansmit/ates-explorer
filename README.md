@@ -1,6 +1,6 @@
 # ATES Explorer v0.6.0
 
-[ChatGPT Sites app](https://ates-explorer.floriansmit88.chatgpt.site/) · [User guide](docs/USER_GUIDE.md) · [Model and validation](docs/MODEL.md) · [Developer guide](docs/DEVELOPMENT.md) · [Codex handover](HANDOVER.md)
+[GitHub Pages app](https://floriansmit.github.io/ates-explorer/) · [ChatGPT Sites app](https://ates-explorer.floriansmit88.chatgpt.site/) · [User guide](docs/USER_GUIDE.md) · [Model and validation](docs/MODEL.md) · [Developer guide](docs/DEVELOPMENT.md) · [Codex handover](HANDOVER.md)
 
 ![ATES Explorer custom profile](docs/screenshots/custom-profile.jpg)
 

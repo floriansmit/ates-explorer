@@ -2,6 +2,8 @@
 
 ## GitHub Pages
 
+Live app: https://floriansmit.github.io/ates-explorer/
+
 The repository includes `.github/workflows/pages.yml`. Pushes to main run the tests and static build, upload dist/ and deploy through GitHub Pages. Pull requests run tests/build only. No npm dependencies or repository secrets are needed.
 
 One-time repository setup: Settings → Pages → Build and deployment → Source → **GitHub Actions**. Then rerun the Pages workflow or push a commit. The deployment job links its actual page URL in the Actions run. If Pages is not enabled, the configure step reports a missing Pages site; this is an administration setting, not an application build failure. The workflow also supports a manual run.
