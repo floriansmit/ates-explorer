@@ -12,22 +12,22 @@ npm run build
 npm start
 ```
 
-Open http://localhost:8080 over HTTP. `npm start` serves the source root; to inspect generated output, run `python3 -m http.server 8080 --directory dist`. Do not open index.html via file://: ES modules and Web Workers require a suitable HTTP origin. Live lookup needs internet access and provider CORS. No API secrets are needed for current adapters. The KDS transition token in location.js is a documented public service token, not a private credential; its service lifetime may change.
+Open http://localhost:8080 over HTTP. `npm start` serves `src/`; to inspect generated output, run `python3 -m http.server 8080 --directory dist`. Do not open index.html via file://: ES modules and Web Workers require a suitable HTTP origin. Live lookup needs internet access and provider CORS. No API secrets are needed for current adapters. The KDS transition token in `src/js/location.js` is a documented public service token, not a private credential; its service lifetime may change.
 
 ## Modules
 
 | File | Responsibility |
 | --- | --- |
-| app.js / index.html / style.css | UI, input invalidation, scenario import/export |
-| countries.js / location.js | Provider metadata, coordinate/address/map UX |
-| regis.js / fohm.js | Dutch/Danish profile retrieval and parsing |
-| custom-profile.js | Manual depth/elevation normalization and validation |
-| reservoirs.js | Screen geometry, transmissivity and flow allocation |
-| engine.js | Fast monthly hydraulic/energy screening |
-| thermal.js / thermal-worker.js | Transient solver and worker execution |
-| snapshots.js / thermal-viewer.js | Saved output layout, timeline and rendering |
+| `src/js/app.js` / `src/index.html` / `src/assets/style.css` | UI, input invalidation, scenario import/export |
+| `src/js/countries.js` / `src/js/location.js` | Provider metadata, coordinate/address/map UX |
+| `src/js/regis.js` / `src/js/fohm.js` | Dutch/Danish profile retrieval and parsing |
+| `src/js/custom-profile.js` | Manual depth/elevation normalization and validation |
+| `src/js/reservoirs.js` | Screen geometry, transmissivity and flow allocation |
+| `src/js/engine.js` | Fast monthly hydraulic/energy screening |
+| `src/js/thermal.js` / `src/js/thermal-worker.js` | Transient solver and worker execution |
+| `src/js/snapshots.js` / `src/js/thermal-viewer.js` | Saved output layout, timeline and rendering |
 | scripts/build.mjs | Static dist output and source ZIP |
-| tests/ | 37 numerical, parser and profile checks at v0.6.0 |
+| `tests/` | 40 numerical, parser, profile and source-structure checks at v0.6.0 |
 
 ## Extend a provider
 

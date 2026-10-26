@@ -1,5 +1,5 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';
-import {stackProperties,isSand} from '../reservoirs.js';import {simulate,defaults} from '../engine.js';import {runThermal,thermalDefaults} from '../thermal.js';
+import {stackProperties,isSand} from '../src/js/reservoirs.js';import {simulate,defaults} from '../src/js/engine.js';import {runThermal,thermalDefaults} from '../src/js/thermal.js';
 const layers=[{code:'Sand z1',top:0,bottom:-20,kh:10},{code:'Sand z2',top:-40,bottom:-50,kh:30}];
 test('net sands and transmissivity exclude intervening clay',()=>{const s=stackProperties(layers);assert.equal(s.thickness,30);assert.equal(s.grossThickness,50);assert.equal(s.excludedThickness,20);assert.equal(s.transmissivity,500);assert.equal(s.kh,500/30);assert.equal(s.layers[0].flowShare,.4);assert.equal(s.layers[1].flowShare,.6);});
 test('partial screens and edited conductivity change flow allocation',()=>{const s=stackProperties([{...layers[0],screenTop:-5,screenBottom:-15,kh:20},layers[1]]);assert.equal(s.transmissivity,500);assert.equal(s.thickness,20);assert.equal(s.excludedThickness,25);});

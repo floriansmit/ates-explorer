@@ -1,4 +1,4 @@
-import {test} from 'node:test';import assert from 'node:assert/strict';import {defaults,simulate} from '../engine.js';
+import {test} from 'node:test';import assert from 'node:assert/strict';import {defaults,simulate} from '../src/js/engine.js';
 test('energy conservation and unit conversions',()=>{const r=simulate(defaults),a=r.annual[0];assert.ok(Math.abs(a.heat-a.extraction-a.heat/defaults.cop)<1e-8);assert.ok(Math.abs(a.cool-a.injection)<1e-8);assert.ok(Math.abs(r.sourceKW-1.163*r.flow*defaults.deltaT)<1e-8);for(const row of r.rows)assert.ok(row.heatUnmet>=0&&row.coolUnmet>=0);});
 test('zero demand gives zero energy and pumping',()=>{const r=simulate({...defaults,heating:0,cooling:0});assert.equal(r.annual[0].electricity,0);assert.equal(r.annualVolume,0);});
 test('hydraulic cap and independent parallel pairs',()=>{const r=simulate({...defaults,kh:0.1});assert.ok(r.flow<defaults.flow);const d=simulate({...defaults,kh:0.1,pairs:2});assert.equal(d.flow,2*r.flow);});

@@ -16,7 +16,7 @@ Tap an aquifer band/label or check its row to select it. Tap again to deselect. 
 
 Edit each screen's top/base and Kh. A screen must remain inside its selected geological unit. Missing Kh blocks calculation; evidence fields record tests or assumptions. Net screened thickness and thickness-weighted Kh are calculated automatically. Flow splits by transmissivity under a shared-head assumption.
 
-Set requested flow, well spacing, independent pair count, allowable head change, pumping head/efficiency, nominal COP and building loads. Import monthly demand with header `month,heat_MWh,cool_MWh`, exactly 12 rows in month order, nonnegative values. Imported data overrides generated annual profiles. Download example-loads.csv for the format.
+Set requested flow, well spacing, independent pair count, allowable head change, pumping head/efficiency, nominal COP and building loads. Import monthly demand with header `month,heat_MWh,cool_MWh`, exactly 12 rows in month order, nonnegative values. Imported data overrides generated annual profiles. Download [example-loads.csv](../src/data/example-loads.csv) for the format.
 
 The results report delivered and unmet energy, capacity and electricity. Backup supply is excluded. Monthly matching does not establish hourly peak coverage.
 
@@ -46,4 +46,4 @@ Changing location, model group, country, draft aquifer selection or custom profi
 
 ## More countries
 
-The Model & next steps tab links the [European inventory](../europe-models.html) and [EGT integration request](../estonia-integration.html). These are research/integration documents, not active country adapters. Estonia can currently be evaluated through Other with user-defined data.
+The Model & next steps tab links the [European inventory](../src/pages/europe-models.html) and [EGT integration request](../src/pages/estonia-integration.html). These are research/integration documents, not active country adapters. Estonia can currently be evaluated through Other with user-defined data.

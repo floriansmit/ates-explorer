@@ -18,6 +18,7 @@ Use it to compare early concepts, explore assumptions and understand the relatio
 - **System performance:** estimate groundwater flow, heating and cooling delivery, unmet demand and electricity use.
 - **Seasonal behaviour:** explore warm and cold plumes, production temperatures and the effect of regional groundwater flow.
 - **Alternative scenarios:** change assumptions, save inputs and export results for further analysis.
+- **Contextual guidance:** use the **?** beside technical inputs for a definition, illustrative range and explanation of how the value affects the model.
 
 ## Get started
 
@@ -60,7 +61,7 @@ Custom-profile depths are positive down from your chosen reference level; elevat
 
 ## Import, export and privacy
 
-- **Monthly demand CSV:** use the header `month,heat_MWh,cool_MWh`, followed by exactly 12 rows for months 1–12 with nonnegative values. Imported loads override the generated seasonal profile. See [example-loads.csv](example-loads.csv).
+- **Monthly demand CSV:** use the header `month,heat_MWh,cool_MWh`, followed by exactly 12 rows for months 1–12 with nonnegative values. Imported loads override the generated seasonal profile. See [example-loads.csv](src/data/example-loads.csv).
 - **Scenario JSON:** export and restore system inputs, geological provenance, selected screens, custom profiles and evidence. After restoring a scenario, rerun the thermal simulation.
 - **Results:** download monthly screening results as CSV and transient thermal results as JSON.
 
@@ -82,5 +83,5 @@ Treat results as sensitive to your geological, hydraulic, thermal and building a
 - [Model description](docs/MODEL.md) — equations, assumptions and excluded processes.
 - [Verification and validation status](docs/VALIDATION.md) — what has been checked and what remains unvalidated.
 - [Screenshot gallery](docs/SCREENSHOTS.md) — example workflows and views.
-- [European model inventory](europe-models.html) — potential data sources for additional countries; these are not active country integrations.
+- [European model inventory](src/pages/europe-models.html) — potential data sources for additional countries; these are not active country integrations.
 - [Developer guide](docs/DEVELOPMENT.md) — running locally, testing and building.

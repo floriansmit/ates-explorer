@@ -6,7 +6,7 @@ User intent: open-loop ATES companion to existing REGIS II-based closed-loop Bor
 
 Live TNO OPeNDAP adapter, exact layer codes, NAP elevations and provenance; manual overrides; monthly load matching/import; scenario restore/export; experimental 2D transient heat transport in a worker, seasonal doublet reversal, regional flow, approximate dispersion and conduction, production-temperature limits and variable approximate COP, temperature plots/maps and energy ledger. All limitations in README and Model tab apply.
 
-37 automated tests pass; live retrieval, aquifer selection and five-year thermal run were exercised in browser. Mobile responsive CSS implemented; no physical iPhone test performed. Analytical Gaussian conduction test passes; this is not validation of the ATES/doublet model.
+40 automated tests pass; live retrieval, aquifer selection and five-year thermal run were exercised in browser. Mobile responsive CSS implemented; no physical iPhone test performed. Analytical Gaussian conduction test passes; this is not validation of the ATES/doublet model.
 
 ## Next priorities
 
@@ -55,6 +55,6 @@ The hosted Europe inventory and EGT integration request are linked from Model & 
 
 ## Working from GitHub / Codex
 
-Repository: https://github.com/floriansmit/ates-explorer (main). Read docs/DEVELOPMENT.md, docs/MODEL.md and docs/VALIDATION.md before changing calculations. Run npm test and npm run build. Application modules and HTML live at repository root; dist/ is generated and ignored. No dependency installation is required for the app. A GitHub Actions workflow builds and publishes dist/ after Pages is enabled with GitHub Actions as its source. The ChatGPT Sites deployment is separate and is not automatically updated by a GitHub push. Preserve .openai/hosting.json only when working on the existing Sites project; do not accidentally register a duplicate Site.
+Repository: https://github.com/floriansmit/ates-explorer (main). Read docs/DEVELOPMENT.md, docs/MODEL.md and docs/VALIDATION.md before changing calculations. Run npm test and npm run build. Application source lives under `src/`: JavaScript in `src/js/`, styles and vendored browser assets in `src/assets/`, supporting pages in `src/pages/`, and examples in `src/data/`. `dist/` is generated and ignored. No dependency installation is required for the app. A GitHub Actions workflow builds and publishes `dist/` after Pages is enabled with GitHub Actions as its source. The ChatGPT Sites deployment is separate and is not automatically updated by a GitHub push. Preserve `.openai/hosting.json` only when working on the existing Sites project; do not accidentally register a duplicate Site.
 
 Documentation screenshots use illustrative assumptions or explicitly identified public REGIS test coordinates. They are software examples, not calibrated Estonia/site results. Pending scientific work: independent MODFLOW/OPM comparison, advection convergence, vertical leakage/conduction, hourly dispatch, manufacturer curves, actual saturation and field calibration. The Europe inventory is a research shortlist with unknown entries, not a complete registry. EGT's proposed JSON example is not an existing EGT endpoint.
