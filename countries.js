@@ -1,0 +1,10 @@
+export const COUNTRIES={
+ OTHER:{name:'Other / custom profile',crs:null,coordinateLabel:'User-defined location',datumShort:'m local reference',provider:'User-defined profile',searchProvider:null},
+ NL:{name:'Netherlands',crs:'EPSG:28992',coordinateLabel:'Dutch RD',datumShort:'m NAP',provider:'TNO REGIS II',searchProvider:'PDOK Locatieserver',centre:[52.12,5.3],zoom:8,placeholder:'Street, house number, town',tile:'https://service.pdok.nl/kadaster/brt-achtergrondkaart/wmts/v2_0/standaard/EPSG:3857/{z}/{x}/{y}.png',attribution:'Map: <a href="https://www.pdok.nl">PDOK / Kadaster</a>'},
+ DK:{name:'Denmark',crs:'EPSG:25832',coordinateLabel:'ETRS89 / UTM 32N',datumShort:'m source elev.',provider:'GEUS FOHM service',searchProvider:'KDS Adressevælger',centre:[56.1,10.1],zoom:7,placeholder:'Street, house number, postcode (e.g. 2100)',tile:'https://tile.openstreetmap.org/{z}/{x}/{y}.png',attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}
+};
+export function countryConfig(code){if(!COUNTRIES[code])throw Error('Unsupported country.');return COUNTRIES[code];}
+export function elevationLabel(profile,country='NL'){return profile?.datumShort??countryConfig(country).datumShort;}
+export function lithology(layer){if(layer.lithology)return layer.lithology;return /z\d/i.test(layer.code)?'sand':'other';}
+export function aquiferCandidate(layer){const type=lithology(layer);return type==='sand'||type==='carbonate'||type==='aquifer';}
+export function lithologyLabel(layer){return {sand:'Sand',aquifer:'Other aquifer',carbonate:'Chalk / limestone',clay:'Clay / aquitard',other:'Other / unclassified'}[lithology(layer)]??'Other';}

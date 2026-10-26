@@ -1,0 +1,26 @@
+{
+  "model_id": "EGT_MODEL_ID",
+  "model_version": "PROVIDER_VERSION",
+  "horizontal_crs": "EPSG:3301",
+  "vertical_datum": "EH2000 (if applicable; confirm)",
+  "elevation_unit": "m",
+  "elevation_positive": "up",
+  "conductivity_unit": "m/day",
+  "coverage_status": "inside",
+  "cell_size_m": null,
+  "layers": [
+    {
+      "unit_id": "DEMO_AQUIFER",
+      "unit_name": "Illustrative aquifer, not Estonian data",
+      "hydrogeological_role": "aquifer",
+      "lithology": "sandstone",
+      "top_elevation_m": -20,
+      "base_elevation_m": -60,
+      "kh_m_per_day": null,
+      "kv_m_per_day": null,
+      "head_elevation_m": null,
+      "temperature_c": null,
+      "property_source": null
+    }
+  ]
+}

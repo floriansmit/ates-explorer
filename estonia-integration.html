@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EGT integration request · ATES Explorer</title><style>body{font:16px/1.65 system-ui;color:#173e36;background:#f4f6f0;margin:24px}main{max-width:850px;margin:auto}a{color:#176849}pre{overflow:auto;background:white;padding:18px;border-radius:8px;font-size:13px}h1{line-height:1.2}</style><main><a href="./europe-models.html">← European inventory</a><h1>Estonia integration · request for EGT</h1><p>Proposed provider-neutral contract, not an existing EGT endpoint or confirmed EGT schema.</p><p>Preferred: a documented HTTPS point-query API accepting easting/northing in L-EST97 (EPSG:3301), with optional WGS84 support. Return all intersected units from shallow to deep in JSON. Request and response must identify CRS and axis order explicitly. No specific endpoint URL is assumed.</p><h2>Minimum useful response</h2><ul><li>Stable unit ID/name and aquifer/aquitard/other role.</li><li>Numeric top and base elevations, their units, vertical datum and sign convention. Depths are also acceptable with a ground/reference elevation and explicit conversion.</li><li>Model ID/version, coverage status, resolution and source/provenance. No-data or outside-coverage responses must be explicit.</li><li>Kh where available, with units and whether measured, assigned or calibrated. Missing conductivity should be null, never zero. Geometry alone is enough for a first connection.</li><li>Licence permitting reuse/display and derived calculations; authentication/rate limits; CORS for direct browser use or permission to access through a server adapter.</li></ul><h2>Valuable optional data</h2><p>Kv, groundwater heads by aquifer and scenario/date, effective porosity, storage properties, ambient groundwater temperature, salinity, hydraulic/thermal-property uncertainty and evidence, faults and model confidence. Head surfaces allow us to derive gradients after confirming support and scenario; we must distinguish Darcy flux from pore velocity.</p><h2>If no API exists</h2><p>GeoTIFF (ideally Cloud Optimized GeoTIFF) or ESRI ASCII grids for unit top/base and properties; documented NetCDF; or GeoPackage / database tables for boreholes and attributes. Provide CRS, vertical datum, unit catalogue, units, nodata values, extent, model version and reuse terms. Structured or unstructured MODFLOW/FEFLOW model files are also usable with their geometry, properties and metadata, but require preprocessing into a profile-query service. Surface meshes (GOCAD TSurf / VTK etc.) require unit identities, geological relationships and datum; they need more preprocessing than rasters. A texture-only 3D viewer is insufficient.</p><p>WCS or a numerical REST service is particularly convenient for rasters. WFS/OGC API Features can supply boreholes/attribute features, but do not automatically provide 3D surfaces. WMS is primarily for viewing; use GetFeatureInfo only if actual numeric layer elevations are exposed reliably.</p><h2>Questions for EGT</h2><p>Which current model should be used for a Tallinn site? Is it the national model, a local/regional model or a Baltic Artesian Basin derivative? Can both saturated geometry and hydraulic properties be supplied? Is there an existing numerical point-query service, downloadable grid package, or an internal service that could be made available?</p><h2>Illustrative response</h2><p>All numbers below are synthetic. Property nulls mean unknown.</p><pre>{
+  &quot;model_id&quot;: &quot;EGT_MODEL_ID&quot;,
+  &quot;model_version&quot;: &quot;PROVIDER_VERSION&quot;,
+  &quot;horizontal_crs&quot;: &quot;EPSG:3301&quot;,
+  &quot;vertical_datum&quot;: &quot;EH2000 (if applicable; confirm)&quot;,
+  &quot;elevation_unit&quot;: &quot;m&quot;,
+  &quot;elevation_positive&quot;: &quot;up&quot;,
+  &quot;conductivity_unit&quot;: &quot;m/day&quot;,
+  &quot;coverage_status&quot;: &quot;inside&quot;,
+  &quot;cell_size_m&quot;: null,
+  &quot;layers&quot;: [
+    {
+      &quot;unit_id&quot;: &quot;DEMO_AQUIFER&quot;,
+      &quot;unit_name&quot;: &quot;Illustrative aquifer, not Estonian data&quot;,
+      &quot;hydrogeological_role&quot;: &quot;aquifer&quot;,
+      &quot;lithology&quot;: &quot;sandstone&quot;,
+      &quot;top_elevation_m&quot;: -20,
+      &quot;base_elevation_m&quot;: -60,
+      &quot;kh_m_per_day&quot;: null,
+      &quot;kv_m_per_day&quot;: null,
+      &quot;head_elevation_m&quot;: null,
+      &quot;temperature_c&quot;: null,
+      &quot;property_source&quot;: null
+    }
+  ]
+}</pre><p><a href="./estonia-point-response.example.json" download>Download proposed JSON example</a></p></main></html>
