@@ -12,7 +12,7 @@ Use it to compare early concepts, explore assumptions and understand the relatio
 
 ## What you can explore
 
-- **Local geology:** retrieve a geological profile in the Netherlands or Denmark, or build your own layered profile for another location.
+- **Local geology:** retrieve a geological profile in the Netherlands, Denmark or the compiled Estonia portion of PUMA/MOSYS, or build your own layered profile elsewhere.
 - **Aquifer selection:** select one or several aquifers, adjust well-screen intervals and enter hydraulic properties.
 - **Building demand:** use generated seasonal heating/cooling profiles or import your own monthly loads.
 - **System performance:** estimate groundwater flow, heating and cooling delivery, unmet demand and electricity use.
@@ -24,7 +24,7 @@ Use it to compare early concepts, explore assumptions and understand the relatio
 
 Open the [app](https://floriansmit.github.io/ates-explorer/) in your browser. No installation is needed.
 
-1. **Choose a country and site.** For the Netherlands or Denmark, search for an address, click the map or enter coordinates. For another country, choose **Other · custom profile** and enter your own layers and elevation reference. You can also choose **Explore an example stack** to try a labelled synthetic profile.
+1. **Choose a country and site.** For the Netherlands, Denmark or Estonia, search for a place, click the map or enter coordinates. In Estonia, green map coverage is queryable; dashed coverage identifies a catalogued model whose numerical package is not connected. For another country, choose **Other · custom profile** and enter your own layers and elevation reference.
 2. **Select the aquifers.** Click an aquifer band in the profile or select its row in the layer list. Select multiple intervals if needed, then click **Use selected aquifer intervals**. Clay and unselected gaps are excluded from screened thickness and transmissivity.
 3. **Configure the system.** Review screen tops/bases and horizontal hydraulic conductivity (**Kh**, in m/day). Enter any missing Kh values before calculating. Set flow, well spacing, well-pair count, pumping assumptions and heat-pump settings.
 4. **Define building demand.** Enter annual heating and cooling demand or import 12 monthly values. Review the **Building × aquifer match**, monthly delivery and aquifer energy balance.
@@ -39,7 +39,8 @@ See the [user guide](docs/USER_GUIDE.md) for detailed instructions.
 | --- | --- | --- |
 | **Netherlands · REGIS II** | Live TNO regional layer geometry and available hydraulic properties on a 100 m grid; elevations in m NAP. | Confirm local conditions, feasible saturated screen intervals and any missing Kh values. |
 | **Denmark · FOHM / DK-model** | Live GEUS layer geometry, separated into named source-model groups. | Choose one model group and enter Kh for every selected interval. The point service does not declare a vertical datum; elevations remain labelled as source elevations. |
-| **Other · custom profile** | User-defined aquifer and aquitard layers for any country, including Estonia. | Supply layer depths, a consistent elevation reference, hydraulic properties and supporting evidence or assumptions. |
+| **Estonia · PUMA/MOSYS** | Static compilation of the public 2012 Baltic Artesian Basin model, clipped to Estonia. Queries interpolate the original triangular-mesh surfaces and use model-cell Kh. Unit codes are correlated to EGT and Estonia–Latvia stratigraphy, with a local schematic column shown beneath each profile. | Regional research model, not an EGT site model. Broad model packages can contain sandstone, carbonate, marl and clay interbeds. Carbonate permeability is fracture/karst controlled and model Kh is not a substitute for site testing. Virumaa and Uljaste are mapped as catalogue entries but are not queryable. |
+| **Other · custom profile** | User-defined aquifer and aquitard layers for any country. | Supply layer depths, a consistent elevation reference, hydraulic properties and supporting evidence or assumptions. |
 
 Missing data stays unknown. A failed or unavailable geological lookup does not silently substitute an example profile. Regional models help frame an assessment but do not establish site suitability.
 
@@ -64,6 +65,7 @@ Custom-profile depths are positive down from your chosen reference level; elevat
 - **Monthly demand CSV:** use the header `month,heat_MWh,cool_MWh`, followed by exactly 12 rows for months 1–12 with nonnegative values. Imported loads override the generated seasonal profile. See [example-loads.csv](src/data/example-loads.csv).
 - **Scenario JSON:** export and restore system inputs, geological provenance, selected screens, custom profiles and evidence. After restoring a scenario, rerun the thermal simulation.
 - **Results:** download monthly screening results as CSV and transient thermal results as JSON.
+- **Regional model package:** the checked-in [Estonia PUMA export](exports/estonia-puma-v1/README.md) contains a Geothermal Explorer architecture, GeoDecision horizon grids, hydraulic-conductivity grids, stratigraphy and coverage metadata.
 
 Calculations run on your device. Imported scenario and demand files are processed locally. Address searches, maps and geological lookups contact their respective external services. There is no telemetry or automatic project saving, so **export a scenario before leaving if you want to keep your work**.
 

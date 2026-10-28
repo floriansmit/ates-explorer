@@ -6,7 +6,7 @@ User intent: open-loop ATES companion to existing REGIS II-based closed-loop Bor
 
 Live TNO OPeNDAP adapter, exact layer codes, NAP elevations and provenance; manual overrides; monthly load matching/import; scenario restore/export; experimental 2D transient heat transport in a worker, seasonal doublet reversal, regional flow, approximate dispersion and conduction, production-temperature limits and variable approximate COP, temperature plots/maps and energy ledger. All limitations in README and Model tab apply.
 
-40 automated tests pass; live retrieval, aquifer selection and five-year thermal run were exercised in browser. Mobile responsive CSS implemented; no physical iPhone test performed. Analytical Gaussian conduction test passes; this is not validation of the ATES/doublet model.
+Automated tests cover numerical behaviour, providers, profiles and source structure; live retrieval, aquifer selection and a five-year thermal run were exercised in browser. Mobile responsive CSS implemented; no physical iPhone test performed. Analytical Gaussian conduction test passes; this is not validation of the ATES/doublet model.
 
 ## Next priorities
 
@@ -51,7 +51,15 @@ Aquifer bands and labels in the 1D profile toggle the same draft selection as ta
 
 OTHER hides address/map/coordinate retrieval. The custom editor defines unique named aquifers and aquitards using positive-down top/base depths and a named elevation reference; custom-profile.js converts to the common positive-up elevation schema and rejects overlaps, reversed/empty geometry and invalid Kh. Sand/gravel, generic aquifer/sandstone and carbonate can be selected; clay/non-reservoirs cannot. Missing Kh is allowed for geometry and still blocks performance. Updates invalidate connected reservoirs before a new preview is applied. Scenario schema v6 retains customDefinition and restores its editor as well as selected screen configuration. No Estonian geometry is fabricated.
 
-The hosted Europe inventory and EGT integration request are linked from Model & next steps and included in downloadable source. The inventory distinguishes verified model families from unassessed countries, public viewing from numerical APIs, and geological frameworks from hydrogeological columns. No additional live country adapter is claimed. Three custom-profile tests cover conversions, stacked calculations, missing/invalid data and JSON round trips.
+The hosted Europe inventory and EGT integration request are linked from Model & next steps and included in downloadable source. The inventory distinguishes verified model families from unassessed countries, public viewing from numerical APIs, and geological frameworks from hydrogeological columns. Three custom-profile tests cover conversions, stacked calculations, missing/invalid data and JSON round trips.
+
+## Estonia PUMA/MOSYS integration
+
+`scripts/compile-puma.py` clips the public University of Latvia PUMA/MOSYS VTK model to Estonia while retaining its original triangular-prism mesh, 43 surfaces and 42 horizontal-conductivity layers. The generated `src/data/puma-estonia.json` supports browser-local barycentric point queries through `puma.js`; no runtime proxy or CORS-dependent PUMA call is used. The model is from 2012 and must be described as regional screening evidence, not a current EGT model or site verification. Required University of Latvia/PUMA/Virbulis et al. citation is retained in the dataset metadata and UI documentation.
+
+`src/js/puma-stratigraphy.js` is the single source of truth for PUMA code names, typical Estonian lithologies and aquifer/aquitard roles. It is based on the EGT national stratigraphic column, the Estonia–Latvia hydrostratigraphic correlation and the original PUMA paper. Do not revert to classifying units by Kh alone: Ordovician–Silurian packages are carbonate successions, O1 is mixed, Devonian packages alternate clastic and carbonate units, and named `*`, Narva, Lontova and Kotlin intervals are explicit aquitards. The local stratigraphic column is rendered from the same metadata used by the profile table.
+
+The Estonia map shows the queryable compiled PUMA subset in green, the published Lääne-/Ida-Viru regional-model coverage as a dashed catalogue polygon, and Lake Uljaste as a location-only marker because no verified digital model boundary/package is public. Administrative outlines derive from OpenStreetMap under ODbL. Virumaa and Uljaste must not be presented as queryable until their numerical packages, reuse terms, CRS/datum and layer semantics are obtained.
 
 ## Working from GitHub / Codex
 

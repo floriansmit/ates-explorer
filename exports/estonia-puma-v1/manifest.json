@@ -1,0 +1,714 @@
+{
+  "schema": "ates-explorer/portable-geological-model/v1",
+  "id": "puma-estonia-2012-export-v1",
+  "title": "Estonia PUMA/MOSYS sedimentary succession and basement top",
+  "source_model": {
+    "model": "PUMA/MOSYS Baltic Artesian Basin hydrogeological model",
+    "source": "https://www.puma.lu.lv/fileadmin/user_upload/lu_portal/projekti/puma/Interactives/MOSYS-BAB.VTK.zip",
+    "sourcePage": "https://www.gprm.lu.lv/lv/dati/baltbasinhgmodelis/",
+    "sourcePublished": "2012-11-29",
+    "compiledAt": "2026-10-26T17:44:04.378745+00:00",
+    "crs": "EPSG:25884",
+    "datum": "Model elevation in metres above sea level; exact vertical datum is not stated in the point service.",
+    "mesh": "Original variable-resolution triangular-prism mesh; no spatial resampling.",
+    "citation": "University of Latvia, ESF PUMA project; Virbulis et al. (2013), Hydrogeology Journal 21(4), 845–862.",
+    "boundary": "OpenStreetMap contributors, ODbL 1.0; simplified Estonia administrative boundary used only to clip the model subset.",
+    "vertexStride": 45,
+    "layerCount": 42
+  },
+  "export": {
+    "grid_spacing_m": 5000,
+    "rows": 58,
+    "columns": 82,
+    "nodata": -9999
+  },
+  "geometry": {
+    "horizontal_crs": "EPSG:25884",
+    "vertical_reference": "Model elevation in metres above sea level; exact vertical datum is not stated in the point service.",
+    "surface_values": "positive depth in metres below source model sea level",
+    "resampling": "barycentric interpolation from original triangular mesh"
+  },
+  "basement": {
+    "top_horizon": "basement-top",
+    "extent": "half_space_below_top",
+    "type": "unclassified_crystalline_basement",
+    "base_horizon": null,
+    "future_overlays": [
+      "basement_type_map",
+      "fault_locations"
+    ]
+  },
+  "coverage": {
+    "path": "coverage.geojson",
+    "sha256": "fa9d125c4630da76e38f2c09790020fffbb160085d54ad0bf7118afb6ccdc1bd"
+  },
+  "stratigraphy": {
+    "path": "stratigraphy.json",
+    "sha256": "73cda04e84614081fa116d9b8b903d6ff4f266915703bf3d37eee164e407fbbf"
+  },
+  "properties": {
+    "horizontal_hydraulic_conductivity": [
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/00_q_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "q",
+        "sha256": "21cd56d781d93c5a1e3fa41b0175f2cb384ffc6370412b7bdb9a8b4f4f0eb701"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/01_q2_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "q2",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/02_q3_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "q3",
+        "sha256": "21cd56d781d93c5a1e3fa41b0175f2cb384ffc6370412b7bdb9a8b4f4f0eb701"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/03_q4_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "q4",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/04_pgng_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "pgng",
+        "sha256": "21cd56d781d93c5a1e3fa41b0175f2cb384ffc6370412b7bdb9a8b4f4f0eb701"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/05_k_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "k",
+        "sha256": "fc8874dad0347ee779e4c88f705d45b94c2f3d9b16bd466bd691dbd2ab46f0a6"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/06_j_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "j",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/07_j_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "j",
+        "sha256": "eb81fead8f2b2b7bdf1ab819f2ab76542223c7ea6c2dccab0553339231e7a995"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/08_t_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "t",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/09_p2_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "p2",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/10_p2_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "p2",
+        "sha256": "fc8874dad0347ee779e4c88f705d45b94c2f3d9b16bd466bd691dbd2ab46f0a6"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/11_c_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "c",
+        "sha256": "fc8874dad0347ee779e4c88f705d45b94c2f3d9b16bd466bd691dbd2ab46f0a6"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/12_c_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "c",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/13_d3insk_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d3insk",
+        "sha256": "eae24514e984a7a83e891dcf70adda9ed34ae601c8dd38a927a2e59759e630db"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/14_d3stel_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d3stel",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/15_d3ogkt_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d3ogkt",
+        "sha256": "eae24514e984a7a83e891dcf70adda9ed34ae601c8dd38a927a2e59759e630db"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/16_d3ogkt_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d3ogkt",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/17_d3dg_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d3dg",
+        "sha256": "21cd56d781d93c5a1e3fa41b0175f2cb384ffc6370412b7bdb9a8b4f4f0eb701"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/18_d3slp_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d3slp",
+        "sha256": "eae24514e984a7a83e891dcf70adda9ed34ae601c8dd38a927a2e59759e630db"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/19_d3pl_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d3pl",
+        "sha256": "21cd56d781d93c5a1e3fa41b0175f2cb384ffc6370412b7bdb9a8b4f4f0eb701"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/20_d3pl_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d3pl",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/21_d3am_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d3am",
+        "sha256": "fc8874dad0347ee779e4c88f705d45b94c2f3d9b16bd466bd691dbd2ab46f0a6"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/22_d3am_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d3am",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/23_d3gl_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d3gl",
+        "sha256": "fc8874dad0347ee779e4c88f705d45b94c2f3d9b16bd466bd691dbd2ab46f0a6"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/24_d3gl_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d3gl",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/25_d2br_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d2br",
+        "sha256": "fc8874dad0347ee779e4c88f705d45b94c2f3d9b16bd466bd691dbd2ab46f0a6"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/26_d2br_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d2br",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/27_d2ar_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d2ar",
+        "sha256": "fc8874dad0347ee779e4c88f705d45b94c2f3d9b16bd466bd691dbd2ab46f0a6"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/28_d2nr_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d2nr",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/29_d1gr-d2zpr_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "d1gr-d2zpr",
+        "sha256": "fc8874dad0347ee779e4c88f705d45b94c2f3d9b16bd466bd691dbd2ab46f0a6"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/30_s4pr_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "s4pr",
+        "sha256": "4b752699cab607dbcf32b895863768aedc7bed2ff17b2c43f43815a0e918871b"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/31_s3ld_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "s3ld",
+        "sha256": "21cd56d781d93c5a1e3fa41b0175f2cb384ffc6370412b7bdb9a8b4f4f0eb701"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/32_s2vn_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "s2vn",
+        "sha256": "4b752699cab607dbcf32b895863768aedc7bed2ff17b2c43f43815a0e918871b"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/33_s1ln_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "s1ln",
+        "sha256": "21cd56d781d93c5a1e3fa41b0175f2cb384ffc6370412b7bdb9a8b4f4f0eb701"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/34_o3_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "o3",
+        "sha256": "58d35452250695a734c6480c05ae7772f60a89afe613a4f3042f0b6bd50c6509"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/35_o2_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "o2",
+        "sha256": "21cd56d781d93c5a1e3fa41b0175f2cb384ffc6370412b7bdb9a8b4f4f0eb701"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/36_o1_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "o1",
+        "sha256": "8b1341457f8b51f62334934b33180b4828bee548d15b11f8ceb8161ab6789726"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/37_cmtr_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "cmtr",
+        "sha256": "eae24514e984a7a83e891dcf70adda9ed34ae601c8dd38a927a2e59759e630db"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/38_cmln_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "cmln",
+        "sha256": "c8984a5b91bc571711a175de06814d440cc2152c43cee4137ae5f42e2070234f"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/39_v2vr_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "v2vr",
+        "sha256": "eae24514e984a7a83e891dcf70adda9ed34ae601c8dd38a927a2e59759e630db"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/40_v2kt_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "v2kt",
+        "sha256": "b5c010c0d930709cce3bef0b1c56a3952f740f090a99eb663955f20976b1d54d"
+      },
+      {
+        "path": "properties/horizontal-hydraulic-conductivity/41_v2gd_kh-m-per-day.asc",
+        "unit": "m/day",
+        "interval": "v2gd",
+        "sha256": "eae24514e984a7a83e891dcf70adda9ed34ae601c8dd38a927a2e59759e630db"
+      }
+    ]
+  },
+  "adapters": {
+    "geothermal_explorer": {
+      "path": "geothermal-explorer/architecture-3d.json",
+      "sha256": "5187d387f93ea676ebc67a33aa4e8152691728821f86b4c9c9b876211c6fffba"
+    },
+    "geodecision": {
+      "path": "geodecision",
+      "format": "Arc/Info ASCII Grid",
+      "import_crs": "EPSG:25884",
+      "vertical_unit": "m",
+      "positive_down": true,
+      "vertical_datum": "source model sea level (exact datum not stated)",
+      "horizons": [
+        {
+          "path": "geodecision/horizons/00_top-q.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 0,
+          "id": "top-q",
+          "sha256": "a70fce069598411ace920954aa8ba54b3a6d7130264c98f83924f7bf11f2f25c",
+          "crs_path": "geodecision/horizons/00_top-q.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/01_top-q2.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 1,
+          "id": "top-q2",
+          "sha256": "33c8e89edff8e4cedef8fa18b89e4fb6692dd7ecbd2285163edcf94237408b5d",
+          "crs_path": "geodecision/horizons/01_top-q2.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/02_top-q3.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 2,
+          "id": "top-q3",
+          "sha256": "4606ab29a911c82bf2125ab49af7ca8e8ef47a8f34dd9f89d757fee7f24b952c",
+          "crs_path": "geodecision/horizons/02_top-q3.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/03_top-q4.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 3,
+          "id": "top-q4",
+          "sha256": "7108c7ae4b2b55861fea3907976293ec57c48fec60159b0c2e61b5576517826c",
+          "crs_path": "geodecision/horizons/03_top-q4.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/04_top-pgng.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 4,
+          "id": "top-pgng",
+          "sha256": "0a31fc9f7ff8fc80c522b7fb9da939f910085999a7b61ea06b0397494f45ae27",
+          "crs_path": "geodecision/horizons/04_top-pgng.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/05_top-k.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 5,
+          "id": "top-k",
+          "sha256": "0a31fc9f7ff8fc80c522b7fb9da939f910085999a7b61ea06b0397494f45ae27",
+          "crs_path": "geodecision/horizons/05_top-k.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/06_top-j.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 6,
+          "id": "top-j",
+          "sha256": "0a31fc9f7ff8fc80c522b7fb9da939f910085999a7b61ea06b0397494f45ae27",
+          "crs_path": "geodecision/horizons/06_top-j.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/07_top-j.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 7,
+          "id": "top-j",
+          "sha256": "0a31fc9f7ff8fc80c522b7fb9da939f910085999a7b61ea06b0397494f45ae27",
+          "crs_path": "geodecision/horizons/07_top-j.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/08_top-t.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 8,
+          "id": "top-t",
+          "sha256": "0a31fc9f7ff8fc80c522b7fb9da939f910085999a7b61ea06b0397494f45ae27",
+          "crs_path": "geodecision/horizons/08_top-t.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/09_top-p2.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 9,
+          "id": "top-p2",
+          "sha256": "0a31fc9f7ff8fc80c522b7fb9da939f910085999a7b61ea06b0397494f45ae27",
+          "crs_path": "geodecision/horizons/09_top-p2.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/10_top-p2.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 10,
+          "id": "top-p2",
+          "sha256": "0a31fc9f7ff8fc80c522b7fb9da939f910085999a7b61ea06b0397494f45ae27",
+          "crs_path": "geodecision/horizons/10_top-p2.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/11_top-c.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 11,
+          "id": "top-c",
+          "sha256": "0a31fc9f7ff8fc80c522b7fb9da939f910085999a7b61ea06b0397494f45ae27",
+          "crs_path": "geodecision/horizons/11_top-c.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/12_top-c.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 12,
+          "id": "top-c",
+          "sha256": "0a31fc9f7ff8fc80c522b7fb9da939f910085999a7b61ea06b0397494f45ae27",
+          "crs_path": "geodecision/horizons/12_top-c.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/13_top-d3insk.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 13,
+          "id": "top-d3insk",
+          "sha256": "0a31fc9f7ff8fc80c522b7fb9da939f910085999a7b61ea06b0397494f45ae27",
+          "crs_path": "geodecision/horizons/13_top-d3insk.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/14_top-d3stel.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 14,
+          "id": "top-d3stel",
+          "sha256": "0a31fc9f7ff8fc80c522b7fb9da939f910085999a7b61ea06b0397494f45ae27",
+          "crs_path": "geodecision/horizons/14_top-d3stel.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/15_top-d3ogkt.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 15,
+          "id": "top-d3ogkt",
+          "sha256": "0a31fc9f7ff8fc80c522b7fb9da939f910085999a7b61ea06b0397494f45ae27",
+          "crs_path": "geodecision/horizons/15_top-d3ogkt.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/16_top-d3ogkt.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 16,
+          "id": "top-d3ogkt",
+          "sha256": "dfb8e0998cbbebd635b2079385322ac613a8cb873446d3ba15d49b55eaf0d829",
+          "crs_path": "geodecision/horizons/16_top-d3ogkt.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/17_top-d3dg.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 17,
+          "id": "top-d3dg",
+          "sha256": "80c61f606044944e8b50eebbafda0ccd9cb546d9eba3b79d2dde4796d734f600",
+          "crs_path": "geodecision/horizons/17_top-d3dg.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/18_top-d3slp.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 18,
+          "id": "top-d3slp",
+          "sha256": "2e4111b40cb49b14407f35b4dcd95a4ebe0080ef9e3e49e068c3f0db9d12eb85",
+          "crs_path": "geodecision/horizons/18_top-d3slp.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/19_top-d3pl.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 19,
+          "id": "top-d3pl",
+          "sha256": "335150b8b3a943a28d70a0809927bf8ac2d773b344b7fab6934d59fd79f83472",
+          "crs_path": "geodecision/horizons/19_top-d3pl.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/20_top-d3pl.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 20,
+          "id": "top-d3pl",
+          "sha256": "69fe8f3c85ac08be3667699d7fc7b5b5d9e7abfee60cde24072dd809836067a8",
+          "crs_path": "geodecision/horizons/20_top-d3pl.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/21_top-d3am.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 21,
+          "id": "top-d3am",
+          "sha256": "1716a6f6320a2c731952dedf4f2c3526c619737d5750076387da5cb46c941d21",
+          "crs_path": "geodecision/horizons/21_top-d3am.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/22_top-d3am.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 22,
+          "id": "top-d3am",
+          "sha256": "78c13118afb5f59f0e3eb92ab7fe29c45ee0b51f534670cb1684c2a25941cd39",
+          "crs_path": "geodecision/horizons/22_top-d3am.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/23_top-d3gl.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 23,
+          "id": "top-d3gl",
+          "sha256": "6433b89c458b227d876b19902318f517bda0c01e396ddae3bb9a602f26d84aa3",
+          "crs_path": "geodecision/horizons/23_top-d3gl.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/24_top-d3gl.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 24,
+          "id": "top-d3gl",
+          "sha256": "a6aaf8fe1eeb72c17c2a9eb8c870a4aef1774c1e564124c20fa1b774f670f632",
+          "crs_path": "geodecision/horizons/24_top-d3gl.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/25_top-d2br.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 25,
+          "id": "top-d2br",
+          "sha256": "ce18f4023fc1737617a6057cd2b0124b08ba7380cfebff92694c7b4e9a831a5e",
+          "crs_path": "geodecision/horizons/25_top-d2br.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/26_top-d2br.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 26,
+          "id": "top-d2br",
+          "sha256": "8e487ed952009fa733751a7832866d9555bcf4914db4275f9522bc3c42b96428",
+          "crs_path": "geodecision/horizons/26_top-d2br.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/27_top-d2ar.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 27,
+          "id": "top-d2ar",
+          "sha256": "59d1cc1af6f29fc7d1620a71c90d7bde00e041b8f23a73271b1578286e012283",
+          "crs_path": "geodecision/horizons/27_top-d2ar.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/28_top-d2nr.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 28,
+          "id": "top-d2nr",
+          "sha256": "a7f57ee07cd0e41c7af3b9c5c7dbbdf8dcb656c4083de4fc9f5fec53569871ed",
+          "crs_path": "geodecision/horizons/28_top-d2nr.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/29_top-d1gr-d2zpr.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 29,
+          "id": "top-d1gr-d2zpr",
+          "sha256": "a976bf977f68ba732b772cca2a2bf30cf4430e24ac47903ec9fc40d4aecbb282",
+          "crs_path": "geodecision/horizons/29_top-d1gr-d2zpr.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/30_top-s4pr.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 30,
+          "id": "top-s4pr",
+          "sha256": "29c752f16d7997dbe55abaef9c05a7d4ff9886f874fd418ba5573cbd1260764f",
+          "crs_path": "geodecision/horizons/30_top-s4pr.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/31_top-s3ld.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 31,
+          "id": "top-s3ld",
+          "sha256": "9d724f676e17a335295956d24986642c50c30d0fdb58ee1daa4f0f70fc08d55b",
+          "crs_path": "geodecision/horizons/31_top-s3ld.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/32_top-s2vn.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 32,
+          "id": "top-s2vn",
+          "sha256": "d421b7eb69edb90c37ba6fbdb86ef6554f6582375c29eb35b3e625c3af7101c2",
+          "crs_path": "geodecision/horizons/32_top-s2vn.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/33_top-s1ln.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 33,
+          "id": "top-s1ln",
+          "sha256": "db702acfc3796b49fc3a619673a4c18264a27faa9fb08c6287db86f5b1e7ce9a",
+          "crs_path": "geodecision/horizons/33_top-s1ln.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/34_top-o3.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 34,
+          "id": "top-o3",
+          "sha256": "6ee23a0bc3cd3fb2226a957a8f02ee2454d1ee41ae5c3c0a0ca2ee2fff759146",
+          "crs_path": "geodecision/horizons/34_top-o3.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/35_top-o2.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 35,
+          "id": "top-o2",
+          "sha256": "3a4ddbe8e6586054f8cd4c3c12d6e2334e076d4b33acd71f0977ae143640582d",
+          "crs_path": "geodecision/horizons/35_top-o2.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/36_top-o1.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 36,
+          "id": "top-o1",
+          "sha256": "6965df3ece33d74c5524b83c41763302ebbf34d2ee7b41e3a77a18af43712335",
+          "crs_path": "geodecision/horizons/36_top-o1.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/37_top-cmtr.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 37,
+          "id": "top-cmtr",
+          "sha256": "5c8ad1813e08381bc3a859558847aad0576bad3d4e6053e93e2f2a90338d750e",
+          "crs_path": "geodecision/horizons/37_top-cmtr.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/38_top-cmln.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 38,
+          "id": "top-cmln",
+          "sha256": "ae8420521737b1c2a4e137f1fc2a92b70401dde04d8697e065a0cf261fbe7c12",
+          "crs_path": "geodecision/horizons/38_top-cmln.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/39_top-v2vr.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 39,
+          "id": "top-v2vr",
+          "sha256": "902be4c3bba83863490b6428322dbaf4bf1789d41ecac869f0b1a49dd42afeb4",
+          "crs_path": "geodecision/horizons/39_top-v2vr.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/40_top-v2kt.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 40,
+          "id": "top-v2kt",
+          "sha256": "9d69875fe1a0ee3b003fa556c7664e44ec0dc578248ec2bd0dfe21cc7b9a3b13",
+          "crs_path": "geodecision/horizons/40_top-v2kt.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/41_top-v2gd.asc",
+          "role": "stratigraphic_horizon",
+          "surface_index": 41,
+          "id": "top-v2gd",
+          "sha256": "5a35202103f57d25d6cfabe0254a069bbeb4f1810faca548c579b589eeea3dc1",
+          "crs_path": "geodecision/horizons/41_top-v2gd.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        },
+        {
+          "path": "geodecision/horizons/42_basement-top.asc",
+          "role": "basement_horizon",
+          "surface_index": 42,
+          "id": "basement-top",
+          "sha256": "5a6b253978534edad6d70a464b8f7e6f068408bc32d9da05a06fbbd471c8d910",
+          "crs_path": "geodecision/horizons/42_basement-top.prj",
+          "crs_sha256": "cf0581d2008249a57a7cb729442fa1e4c7d34f024ebf981a2063a23d4fdc53b4"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Regional 2012 screening model; not a site model.",
+    "The 5 km export grid is a resampling; use the source triangular mesh for point-query fidelity.",
+    "Basement is an unbounded half-space below basement-top; no synthetic basement base is supplied.",
+    "Basement lithology/type and faults are intentionally unassigned pending later overlays."
+  ]
+}

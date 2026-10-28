@@ -21,13 +21,23 @@ Open http://localhost:8080 over HTTP. `npm start` serves `src/`; to inspect gene
 | `src/js/app.js` / `src/index.html` / `src/assets/style.css` | UI, input invalidation, scenario import/export |
 | `src/js/countries.js` / `src/js/location.js` | Provider metadata, coordinate/address/map UX |
 | `src/js/regis.js` / `src/js/fohm.js` | Dutch/Danish profile retrieval and parsing |
+| `src/js/puma.js` / `src/data/puma-estonia.json` | Estonia point profiles from the compiled PUMA/MOSYS mesh |
+| `src/js/puma-stratigraphy.js` | Auditable PUMA code-to-Estonian lithology and hydrostratigraphy mapping used by profiles and the stratigraphic column |
 | `src/js/custom-profile.js` | Manual depth/elevation normalization and validation |
 | `src/js/reservoirs.js` | Screen geometry, transmissivity and flow allocation |
 | `src/js/engine.js` | Fast monthly hydraulic/energy screening |
 | `src/js/thermal.js` / `src/js/thermal-worker.js` | Transient solver and worker execution |
 | `src/js/snapshots.js` / `src/js/thermal-viewer.js` | Saved output layout, timeline and rendering |
 | scripts/build.mjs | Static dist output and source ZIP |
-| `tests/` | 40 numerical, parser, profile and source-structure checks at v0.6.0 |
+| `scripts/compile-puma.py` | Reproducible optional compiler for the public PUMA VTK archive |
+| `tests/` | Numerical, parser, profile, provider and source-structure checks |
+
+The committed PUMA subset is regenerated with `python scripts/compile-puma.py`. Compilation requires `pyproj` and `shapely` and downloads the approximately 114 MB public source archive when it is absent. Temporary source material stays under ignored `.tmp-model-data/`; the normal build has no Python-package dependency.
+
+The portable regional-model adapters are regenerated with `npm run export:puma`.
+This requires `pyproj` and Node.js and writes `exports/estonia-puma-v1`.
+Its README documents the Geothermal Explorer contract, GeoDecision import roles
+and the explicit top-of-basement/half-space convention.
 
 ## Extend a provider
 

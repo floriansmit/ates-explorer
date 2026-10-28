@@ -1,2 +1,4 @@
 dist/
 site.tar.gz
+.tmp-model-data/
+exports/estonia-puma-v1.zip

@@ -4,7 +4,7 @@ ATES Explorer screens low-temperature open-loop aquifer thermal energy storage a
 
 ## 1. Define the geology
 
-**Netherlands:** search an address/place, select a map point or enter Dutch RD coordinates (EPSG:28992). The profile comes from TNO REGIS II. **Denmark:** use a house-number address, map point or UTM 32N coordinates (EPSG:25832). Choose one named FOHM/DK-model group; overlapping source models are never merged. Danish Kh must be entered manually.
+**Netherlands:** search an address/place, select a map point or enter Dutch RD coordinates (EPSG:28992). The profile comes from TNO REGIS II. **Denmark:** use a house-number address, map point or UTM 32N coordinates (EPSG:25832). Choose one named FOHM/DK-model group; overlapping source models are never merged. Danish Kh must be entered manually. **Estonia:** search a place, tap within the green map polygon or enter Baltic TM coordinates (EPSG:25884). The compiled PUMA/MOSYS subset returns interpolated layer surfaces and model-cell Kh. A schematic column expands codes such as `O2`, `S1ln`, `D2br` and `V2kt` into typical Estonian age, unit name, rock succession and hydrogeological role. Lithology is not inferred from conductivity: Ordovician–Silurian units remain carbonate successions even where modelled Kh is low, while explicit clay/marl aquitards remain unavailable for selection. Dashed Virumaa coverage and the Uljaste marker are catalogue information only.
 
 **Other / custom profile:** national lookup controls disappear. Enter a site label, name the vertical datum/local reference, and enter its reference elevation. Add named layers with type, top/base depths, optional Kh and evidence. Depths are positive down from that reference. With reference elevation 40 m and depths 10–25 m, the layer elevations are +30 to +15 m. Blank geometry, overlapping layers, duplicate unit names and invalid conductivity are rejected. Update the profile preview after editing.
 
@@ -46,4 +46,4 @@ Changing location, model group, country, draft aquifer selection or custom profi
 
 ## More countries
 
-The Model & next steps tab links the [European inventory](../src/pages/europe-models.html) and [EGT integration request](../src/pages/estonia-integration.html). These are research/integration documents, not active country adapters. Estonia can currently be evaluated through Other with user-defined data.
+The Model & next steps tab links the [European inventory](../src/pages/europe-models.html) and [EGT integration request](../src/pages/estonia-integration.html). Estonia’s PUMA/MOSYS regional model is connected, but a current national EGT model and the regional Virumaa/Uljaste numerical packages are not. Use custom profiles when current local evidence differs from the compiled regional model.
