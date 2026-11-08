@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-07",
+  "source_commit": "707a767592b1eaf8e5dbb2ab7293ef2a92e0b02d",
+  "thermal_js_sha256": "782e04745b66c6e0faef028108493f552a3ca170c7fa14090881da994dd6bfbb",
+  "node": "v24.22.1",
+  "python": "Python 3.12.14",
+  "mf6": "mf6: 6.7.0 02/05/2026",
+  "numpy": "2.3.5",
+  "flopy": "3.10.0",
+  "case_sha256": "99c57cde5d5e6925744b9b1fb1dc5b0f78d2755b3fa7aa77727f5da74a97e2bd"
+}

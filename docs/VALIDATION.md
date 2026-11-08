@@ -14,6 +14,6 @@ Browser exercises completed during development: real Dutch REGIS retrieval, prof
 4. Add a vertically resolved reference with aquitard heat exchange, leakage and initial head contrasts.
 5. Compare production temperatures, plume extent, energy, heads and delivery with measured systems.
 
-MODFLOW 6 GWF/GWE is the first proposed reference for low-temperature groundwater ATES; OPM Flow is another possible thermal reference, especially for reservoir-style workflows. Neither has been executed as an independent benchmark in this project.
+MODFLOW 6 GWF/GWE is the first proposed reference for low-temperature groundwater ATES; OPM Flow is another possible thermal reference, especially for reservoir-style workflows. At the inspected upstream commit, neither had been executed as an independent benchmark. A first homogeneous zero-regional-flow GWF/GWE comparison has now been executed in this working change; see [benchmark specification](../benchmarks/mf6-doublet/README.md) and [execution evidence](../benchmarks/mf6-doublet/EVIDENCE.md). It is a single synthetic comparison without convergence studies or field calibration, and does not establish general predictive validation.
 
 References: [USGS GWE](https://www.usgs.gov/publications/a-new-groundwater-energy-transport-model-modflow-hydrologic-simulator), [MODFLOW ATES example](https://modflow6-examples.readthedocs.io/en/latest/_notebooks/ex-gwe-ates.html), [OPM Flow](https://opm-project.org/?page_id=19).

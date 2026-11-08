@@ -73,7 +73,17 @@ Changing the location, country, model group or aquifer selection invalidates pre
 
 ## Scope and limitations
 
-ATES Explorer has numerical checks, but it has not yet been independently benchmarked against an established ATES simulator or calibrated against field observations.
+A first independent numerical comparison has been completed against **MODFLOW 6 GWF/GWE** for a homogeneous aquifer doublet with no regional groundwater flow or mechanical dispersion. It uses the unchanged thermal solver with a prescribed charging, storage and recovery schedule. This is one synthetic benchmark; it does not establish general predictive validation or field calibration.
+
+| First benchmark result | Value |
+| --- | ---: |
+| Production-temperature RMSE | 0.0102 °C |
+| Maximum production-temperature difference | 0.0232 °C |
+| Warm-energy recovery, ATES Explorer | 67.18% |
+| Warm-energy recovery, MODFLOW 6 | 66.98% |
+| Nonempty 1 K plume-mask overlap (intersection-over-union) | 98.2–100% |
+
+The [reproducible benchmark](benchmarks/mf6-doublet/README.md) supplies matched properties, schedules, boundary conditions, model generators and comparison scripts. The [execution evidence](benchmarks/mf6-doublet/EVIDENCE.md) records solver versions, conservation checks and remaining limitations. Grid/time/domain convergence, a case that reaches thermal breakthrough, regional-flow and dispersion comparisons, repeated seasonal cycles, plant-demand dispatch and field comparisons remain outstanding. Close agreement in this first case can still conceal shared numerical diffusion.
 
 The model simplifies each selected aquifer as a homogeneous, depth-averaged layer. It excludes vertical leakage and aquitard heat exchange, buoyancy, explicit fracture flow, clogging, geochemistry and interference between neighbouring systems or repeated well pairs. Heat-pump performance is an approximation rather than a manufacturer's performance curve.
 

@@ -1,0 +1,18 @@
+{
+  "id": "homogeneous-doublet-v1",
+  "source_commit": "707a767592b1eaf8e5dbb2ab7293ef2a92e0b02d",
+  "p": {"spacing": 200, "thickness": 20, "kh": 20},
+  "t": {"ambient": 12, "bulkCapacity": 2.5, "thermalConductivity": 2.4, "dispersivity": 0, "gradient": 0, "flowAngle": 0, "cellSize": 10, "padding": 300},
+  "porosity": 0.3,
+  "water_density": 1000,
+  "water_heat_capacity": 4186.8,
+  "solid_density": 2650,
+  "water_conductivity": 0.6,
+  "max_step_hours": 6,
+  "periods": [
+    {"name": "warm-charge", "hours": 2160, "flow": -20, "injection": 18},
+    {"name": "storage", "hours": 2160, "flow": 0, "injection": 12},
+    {"name": "warm-recovery", "hours": 2160, "flow": 20, "injection": 6},
+    {"name": "rest", "hours": 2280, "flow": 0, "injection": 12}
+  ]
+}

@@ -26,4 +26,4 @@ Plan fields show cell-average temperatures at saved times. The section extrudes 
 - Neighbouring systems or interactions among repeated pairs.
 - Hourly equipment control, simultaneous heat recovery, manufacturer maps and backup electricity.
 
-Carbonate and other rock aquifers are equivalent porous media. Regional geometry and entered Kh do not establish operational suitability. No independent MODFLOW/OPM comparison or field calibration has been completed. See VALIDATION.md for the distinction between code checks and predictive evidence.
+Carbonate and other rock aquifers are equivalent porous media. Regional geometry and entered Kh do not establish operational suitability. A first homogeneous MODFLOW 6 comparison is recorded in benchmarks/mf6-doublet/EVIDENCE.md; no convergence study, OPM comparison or field calibration has been completed. See VALIDATION.md for the distinction between code checks and predictive evidence.

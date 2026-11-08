@@ -1,0 +1,164 @@
+{
+  "status": "executed comparison, not validation",
+  "production_sampling": "Explorer explicit start vs MF6 implicit end; refine dt",
+  "production_rmse_C": 0.010227546033258903,
+  "production_max_abs_C": 0.02318969111737701,
+  "explorer_budget": {
+    "well_kWh": -202508.53363440404,
+    "boundary_kWh": 0,
+    "stored_kWh": -202508.53363441172,
+    "residual_kWh": -7.683411240577698e-09
+  },
+  "periods": [
+    {
+      "name": "warm-charge",
+      "explorer_produced_anomaly_kWh": 1.6089252596884763e-10,
+      "explorer_first_0.6K_production_anomaly_hour": null,
+      "mf6_produced_anomaly_kWh": -3.812836038576961e-06,
+      "mf6_first_0.6K_production_anomaly_hour": null
+    },
+    {
+      "name": "storage",
+      "explorer_produced_anomaly_kWh": 0.0,
+      "explorer_first_0.6K_production_anomaly_hour": null,
+      "mf6_produced_anomaly_kWh": 0.0,
+      "mf6_first_0.6K_production_anomaly_hour": null
+    },
+    {
+      "name": "warm-recovery",
+      "explorer_produced_anomaly_kWh": 202508.53363440133,
+      "explorer_first_0.6K_production_anomaly_hour": 4326.0,
+      "mf6_produced_anomaly_kWh": 201901.64545927008,
+      "mf6_first_0.6K_production_anomaly_hour": 4326.0
+    },
+    {
+      "name": "rest",
+      "explorer_produced_anomaly_kWh": 0.0,
+      "explorer_first_0.6K_production_anomaly_hour": null,
+      "mf6_produced_anomaly_kWh": 0.0,
+      "mf6_first_0.6K_production_anomaly_hour": null
+    }
+  ],
+  "plumes": [
+    {
+      "hour": 2160,
+      "field_rmse_C": 0.009886333846565782,
+      "warm_iou": 0.9821428571428571,
+      "explorer_warm_area_m2": 5500,
+      "explorer_warm_centroid_m": [
+        306.45454545454544,
+        305.0
+      ],
+      "mf6_warm_area_m2": 5600,
+      "mf6_warm_centroid_m": [
+        307.32142857142856,
+        305.0
+      ],
+      "cold_iou": null,
+      "explorer_cold_area_m2": 0,
+      "explorer_cold_centroid_m": null,
+      "mf6_cold_area_m2": 0,
+      "mf6_cold_centroid_m": null
+    },
+    {
+      "hour": 4320,
+      "field_rmse_C": 0.008350083168622777,
+      "warm_iou": 0.9827586206896551,
+      "explorer_warm_area_m2": 5700,
+      "explorer_warm_centroid_m": [
+        305.0,
+        305.0
+      ],
+      "mf6_warm_area_m2": 5800,
+      "mf6_warm_centroid_m": [
+        305.86206896551727,
+        305.0
+      ],
+      "cold_iou": null,
+      "explorer_cold_area_m2": 0,
+      "explorer_cold_centroid_m": null,
+      "mf6_cold_area_m2": 0,
+      "mf6_cold_centroid_m": null
+    },
+    {
+      "hour": 6480,
+      "field_rmse_C": 0.010141800366219674,
+      "warm_iou": 1.0,
+      "explorer_warm_area_m2": 2500,
+      "explorer_warm_centroid_m": [
+        305.0,
+        305.0
+      ],
+      "mf6_warm_area_m2": 2500,
+      "mf6_warm_centroid_m": [
+        305.0,
+        305.0
+      ],
+      "cold_iou": 0.9821428571428571,
+      "explorer_cold_area_m2": 5500,
+      "explorer_cold_centroid_m": [
+        503.54545454545456,
+        305.0
+      ],
+      "mf6_cold_area_m2": 5600,
+      "mf6_cold_centroid_m": [
+        502.67857142857144,
+        305.0
+      ]
+    },
+    {
+      "hour": 8760,
+      "field_rmse_C": 0.008463481460581776,
+      "warm_iou": 1.0,
+      "explorer_warm_area_m2": 2500,
+      "explorer_warm_centroid_m": [
+        305.0,
+        305.0
+      ],
+      "mf6_warm_area_m2": 2500,
+      "mf6_warm_centroid_m": [
+        305.0,
+        305.0
+      ],
+      "cold_iou": 0.9827586206896551,
+      "explorer_cold_area_m2": 5700,
+      "explorer_cold_centroid_m": [
+        505.0,
+        305.0
+      ],
+      "mf6_cold_area_m2": 5800,
+      "mf6_cold_centroid_m": [
+        504.13793103448273,
+        305.0
+      ]
+    }
+  ],
+  "warm_recovery": {
+    "injected_anomaly_kWh": 301449.60000000003,
+    "explorer": 0.6717823929253889,
+    "mf6": 0.669769160281752
+  },
+  "flow_max_listing_discrepancy_percent": 200.0,
+  "heat_max_listing_discrepancy_percent": 0.0,
+  "heat_cbc_ledger": {
+    "units": "kWh",
+    "terms": {
+      "STORAGE-CELLBLK": 201901.64628600955,
+      "SOURCE-SINK MIX": -201901.64545545712,
+      "CTP": -0.000824761985308803
+    },
+    "cumulative_residual": 5.790438995384299e-06,
+    "max_abs_rate_residual_per_hour": 7.909117266535759e-10
+  },
+  "flow_cbc_ledger": {
+    "units": "m3",
+    "terms": {
+      "WEL": 0.0,
+      "CHD": -5.899816434448268e-05
+    },
+    "cumulative_residual": -5.899816434448268e-05,
+    "max_abs_rate_residual_per_hour": 1.2381946230514046e-07
+  },
+  "mf6_interior_stored_anomaly_kWh": -201901.64628221624,
+  "mf6_storage_vs_temperature_kWh": 3.7933059502393007e-06
+}
